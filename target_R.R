@@ -348,7 +348,7 @@ rm(sm, keep, present_mesh)
 
 # Data
 cpn <- read_feather('cpn_ts7.feather') |> 
-  mutate(target = ifelse(target, 0, 1)) |> 
+  mutate(target = ifelse(target, 1, 0)) |> 
   select(cpn, pi_id, target, mean_ncs5, topic_switch, log_prev_mean_ncs5, log_seniority)
 
 # Settings
